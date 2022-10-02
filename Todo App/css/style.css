@@ -1,0 +1,170 @@
+/** @ Zye-design all rights reserved *\
+
+/** Custom Properties */
+
+   :root {
+    /** Color */
+  
+    --light-cool-1: hsl(204, 92%, 90%);
+    --light-cool-2: hsl(190, 76%, 82%);
+    --light-cool-3: hsl(189, 75%, 75%);
+    --Deep-cool: hsl(190, 74%, 59%);
+    --cultured: hsl(216, 38%, 95%);
+    --text-color-1: hsl(218, 17%, 62%);
+    --text-color-3: hsl(210, 11%, 15%);
+    --Warning-color: hsl(0, 100%, 50%);
+    --white: hsl(0, 0%, 100%);
+  
+
+  
+    /**
+  *typography 
+  */
+  
+    --ff-nunito: "Nunito", sans-serif;
+    --ff-open-sans: "Open Sans", sans-serif;
+  
+    --fs-1: 2.125rem;
+    --fs-2: 1.875rem;
+    --fs-3: 1.5rem;
+    --fs-4: 1.375rem;
+    --fs-5: 1.125rem;
+    --fs-6: 0.875rem;
+    --fs-7: 0.625rem;
+  
+    --fw-400: 400;
+    --fw-600: 600;
+  
+  
+  }
+
+  /*-----------------------------------*\
+        Reset
+\*-----------------------------------*/
+
+* {
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+span,
+button,
+ion-icon {
+  display: block;
+}
+
+button {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+ion-icon {
+  pointer-events: none;
+}
+
+
+
+ /*-----------------------------------*\
+            Reused style
+    \*-----------------------------------*/
+
+    
+html {
+      font-family: var(--ff-open-sans);
+      color: var(--text-color-3);
+      font-size: 1rem;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+}
+
+
+body {
+  background: var(--cultured);
+  margin: 0 50px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+   /*-----------------------------------*\
+            Main App
+    \*-----------------------------------*/
+
+  
+  .mainApp {
+    background-color: var(--white);
+    width: 300px;
+    height: 500px;
+    border: 5px solid var(--light-cool-2);
+    border-radius: 10px;
+    padding: 14px;
+    overflow-y: scroll;
+    color: var(--text-color-1);
+  }
+  
+  .mainApp::-webkit-scrollbar {
+    width: 0 !important;
+  }
+  
+  #newTask {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--light-cool-1);
+    padding: 5px 10px;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+  
+  .fa-plus {
+    background-color: var(--light-cool-3);
+    padding: 3px;
+    border-radius: 3px;
+    color: var(--cultured);
+  }
+  
+  #tasks {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  
+  #tasks div {
+    border: 3px solid var(--light-cool-2);
+    background-color: var(--light-cool-1);
+    border-radius: 6px;
+    padding: 5px;
+    display: grid;
+    gap: 4px;
+    color: var(--text-color-1);
+  }
+  
+  #tasks div .options {
+    justify-self: flex-end;
+    display: flex;
+    gap: 20px;
+  }
+  
+  #tasks div .options i {
+    cursor: pointer;
+    color: var(--text-color-1);
+  }
+  
+  #message, #dateError {
+    color: var(--Warning-color);
+  }
